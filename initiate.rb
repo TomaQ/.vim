@@ -9,7 +9,7 @@ def create_symlinks(vim_files, vim_dir, home_dir)
       sym = "#{home_dir}/#{f}"
       orig = f != '.vim' ? "#{vim_dir}/#{f}" : "#{vim_dir}"
 
-      # TODO: Added check to see if symlink exists and is pointing to vim_dir;
+      # TODO: Add check to see if symlink exists and is pointing to vim_dir;
       # If not, remove old |f| and create a symlink to |f| in vim_dir.
       if File.exist? sym
         puts "Link '#{sym}' has already been created."
